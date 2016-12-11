@@ -4,14 +4,20 @@ block content
   div(id='wrapper')
     include partials/header
 
-    div(class='col-left-50')
-      include partials/about
+    div(class='row')
+      div(class='col-left-50')
+        include partials/about
 
-    div(class='col-right-50')
-      include partials/hire
-      include partials/experience
-      include partials/links
-      include partials/contact
+      div(class='col-right-50')
+        include partials/hire
+        include partials/experience
+
+    div(id='row')
+      div(class='col-left-50')
+        include partials/links
+
+      div(class='col-right-50')
+        include partials/contact
 
   // All of the JavaScripts get added at the end
   script(src='/javascripts/app.js')
