@@ -3,6 +3,7 @@ const standard = require('gulp-standard')
 const webpack = require('webpack-stream')
 const sass = require('gulp-sass')
 const concat = require('gulp-concat')
+const minify = require('gulp-minify-css')
 
 const config = require('./.config.json')
 const paths = config.paths
@@ -30,6 +31,7 @@ gulp.task('build:sass', () => {
   return gulp.src('./client/sass/init.sass')
     .pipe(sass())
     .pipe(concat(paths.css.file))
+    .pipe(minify())
     .pipe(gulp.dest(paths.css.dir))
 })
 

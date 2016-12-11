@@ -2,7 +2,7 @@ module.exports = {
   entry: './client/js/app.js',
 
   output: {
-    filename: 'app.js'
+    filename: './public/javascripts/app.js'
   },
 
   module: {
