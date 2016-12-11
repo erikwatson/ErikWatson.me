@@ -1,0 +1,21 @@
+{
+  "paths": {
+  	"js": {
+	  "lib": "./client/js/lib",
+	  "app": "./client/js/app.js",
+	  "all": "./client/js/**/*.js",
+	  "dir": "./public/javascripts"
+	},
+
+	"sass": "./client/sass/**/*.sass",
+
+	"css": {
+	  "file": "style.css",
+	  "dir": "./public/stylesheets/"
+	},
+
+	"webpack": {
+	  "config": "./webpack.config.js"
+	}
+  }
+}

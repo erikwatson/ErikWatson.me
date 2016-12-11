@@ -1,0 +1,17 @@
+extends layouts/default
+
+block content
+  div(id='wrapper')
+    include partials/header
+
+    div(class='col-left-50')
+      include partials/about
+      include partials/experience
+
+    div(class='col-right-50')
+      include partials/hire
+      include partials/links
+      include partials/contact
+
+  // All of the JavaScripts get added at the end
+  script(src='/javascripts/app.js')
