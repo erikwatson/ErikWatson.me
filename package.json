@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
+	"start:production": "NODE_ENV=production yarn run start",
 	"build:production": "webpack -p --config ./webpack.config.js"
   },
   "dependencies": {
