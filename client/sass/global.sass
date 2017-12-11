@@ -61,6 +61,7 @@ h2
     margin-top: 20px
     list-style: none
     padding-left: 20px
+    columns: 2
 
     li
       margin-bottom: 5px
@@ -68,6 +69,10 @@ h2
     li:before
       content: "\002B\00A0"
       color: $one
+
+  @media screen and (max-width: 600px)
+    ul
+      columns: 1
 
 @media screen and (max-width: 1024px)
   .col-left-50
