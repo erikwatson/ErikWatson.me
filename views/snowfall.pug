@@ -1,6 +1,13 @@
 extends layouts/default
 
 block content
-  div#snow-container
+  div
+    div#snow-container
+    div(id='snow-header')
+      h1
+        a(href='/') Erik Watson
+      p A Video Game and Web Developer from Mid Wales
+      p
+        a(href='https://github.com/championchap/SnowFall.js') Source
 
   script(src='/javascripts/snowfall.js')
