@@ -3,8 +3,10 @@ const path = require('path')
 const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
+const favicon = require('serve-favicon')
 
 const index = require('./routes/index')
+const snowfall = require('./routes/snowfall')
 const app = express()
 
 // pretty print the html output in dev mode
@@ -16,8 +18,7 @@ if(app.get('env')  === 'development') {
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
-// uncomment after placing your favicon in /public
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.png')))
+app.use(favicon(path.join(__dirname, 'public', 'favicon.png')))
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -25,6 +26,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', index)
+app.use('/snowfall', snowfall)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
