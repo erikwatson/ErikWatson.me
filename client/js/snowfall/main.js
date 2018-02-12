@@ -8,12 +8,14 @@ const ctx = canvas.getContext('2d')
 const gravity = 0.2
 const wind = 0
 
-let snowflakes = makeSnowflakes(250)
+let snowflakes = []
 
 function start () {
   canvas.width = appContainer.offsetWidth
   canvas.height = appContainer.offsetHeight
   appContainer.appendChild(canvas)
+
+  snowflakes = makeSnowflakes(requiredSnowflakes())
 
   window.onresize = onResize
   window.requestAnimationFrame(onEnterFrame)
@@ -23,11 +25,7 @@ function onResize () {
   canvas.width = appContainer.offsetWidth
   canvas.height = appContainer.offsetHeight
 
-  const tenEightyPee = 1920 * 1080
-  const thisScreen = canvas.width * canvas.height
-  const snowflakeCount = Math.round(250 * (thisScreen / tenEightyPee))
-
-  snowflakes = makeSnowflakes(snowflakeCount)
+  snowflakes = makeSnowflakes(requiredSnowflakes())
 }
 
 function onEnterFrame () {
@@ -110,6 +108,14 @@ function makeSnowflakes (num) {
   }
 
   return result
+}
+
+function requiredSnowflakes () {
+  const tenEightyPee = 1920 * 1080
+  const thisScreen = canvas.width * canvas.height
+  const snowflakeCount = Math.round(250 * (thisScreen / tenEightyPee))
+
+  return snowflakeCount
 }
 
 function sineWave (yPos, waveLength, waveHeight, frequency) {
