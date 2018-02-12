@@ -11,8 +11,8 @@ const wind = 0
 let snowflakes = makeSnowflakes(250)
 
 function start () {
-  canvas.width = window.innerWidth
-  canvas.height = window.innerHeight
+  canvas.width = appContainer.offsetWidth
+  canvas.height = appContainer.offsetHeight
   appContainer.appendChild(canvas)
 
   window.onresize = onResize
@@ -20,11 +20,11 @@ function start () {
 }
 
 function onResize () {
-  canvas.width = window.innerWidth
-  canvas.height = window.innerHeight
+  canvas.width = appContainer.offsetWidth
+  canvas.height = appContainer.offsetHeight
 
   const tenEightyPee = 1920 * 1080
-  const thisScreen = window.innerWidth * window.innerHeight
+  const thisScreen = canvas.width * canvas.height
   const snowflakeCount = Math.round(250 * (thisScreen / tenEightyPee))
 
   snowflakes = makeSnowflakes(snowflakeCount)
