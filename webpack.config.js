@@ -1,8 +1,12 @@
 module.exports = {
-  entry: './client/js/app.js',
+  entry: {
+    app: './client/js/app.js',
+    snowfall: './client/js/snowfall/main.js'
+  },
 
   output: {
-    filename: './public/javascripts/app.js'
+    filename: '[name].js',
+    path: __dirname + '/public/javascripts'
   },
 
   module: {
