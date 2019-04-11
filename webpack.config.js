@@ -1,7 +1,6 @@
 module.exports = {
   entry: {
-    app: './client/js/app.js',
-    snowfall: './client/js/snowfall/main.js'
+    app: './client/js/app.js'
   },
 
   output: {

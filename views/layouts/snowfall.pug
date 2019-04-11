@@ -1,0 +1,98 @@
+doctype html
+
+html
+  head
+    title= title
+    link(rel='shortcut icon' type='image/png' href='/favicon.png')
+    link(href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous")
+    link(rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css")
+    style.
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #000000;
+        overflow: hidden;
+        font-family: 'Overpass', sans-serif;
+      }
+
+
+      h2 {
+        margin: 10px 0px 10px 20px;
+      }
+
+      label {
+        font-weight: bold;
+        display: inline-block;
+        width: 100px;
+      }
+
+      #wrapper {
+        display: grid;
+        grid-template-columns: 450px auto;
+        height: 100vh;
+      }
+
+      #snow-container {
+        background-color: #000000;
+      }
+
+      #config {
+        background-color: #ffffff;
+        padding: 20px;
+        overflow-y: scroll;
+      }
+
+      .row {
+        padding: 10px;
+        background-color: #fff;
+        margin-bottom: 1px;
+      }
+
+      .row.bottom {
+        margin-bottom: 20px;
+      }
+
+      #output {
+        width: 100%;
+        display: inline-block;
+      }
+
+      .config-section {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+
+      hr {
+        color: #e3e3e3;
+      }
+
+      input[type="range"] {
+        width: 220px;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+      }
+
+      #title {
+        margin: 50px 0px 70px 0px;
+        text-align: center;
+      }
+
+      #links {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: 50px 0px 50px 0px;
+      }
+
+      #links a {
+        font-size: 24pt;
+        text-align: center;
+      }
+
+body
+    block content
