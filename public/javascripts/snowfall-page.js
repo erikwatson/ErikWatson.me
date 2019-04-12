@@ -3,7 +3,7 @@ var secondary = '#ffffff'
 
 
 var amplitude = 1.00
-var frequency = 0.10
+var frequency = 0.01
 
 snowfall.start({
   bg: '#232323',
