@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "start:production": "NODE_ENV=production forever start bin/www",
+    "start:production": "NODE_ENV=production npx forever start bin/www",
     "build:production": "webpack -p --config ./webpack.config.js"
   },
   "dependencies": {
