@@ -24,7 +24,7 @@
     "gulp-sass": "3.2.1",
     "jquery": "^3.1.1",
     "jstransformer-markdown-it": "^2.0.0",
-    "morgan": "~1.7.0",
+    "morgan": "~1.9.1",
     "nodemon": "^1.11.0",
     "pug": "~2.0.0-beta6",
     "react": "^15.4.1",
