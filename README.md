@@ -16,5 +16,4 @@ are the steps you should take.
 
 # Who made it?
 
-  - [Erik on Twitter](https://twitter.com/championchap)
   - [ErikWatson.me](http://erikwatson.me)
