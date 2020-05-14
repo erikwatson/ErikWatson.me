@@ -2,6 +2,10 @@
 
 This is the source code for my website.
 
+## Screenshot
+
+![Image](docs/images/screenshot.png)
+
 
 ## Instructions
 
