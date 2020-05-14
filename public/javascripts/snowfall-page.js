@@ -42,7 +42,7 @@ ampInput.addEventListener('input', e => {
   ampCount.innerText = e.target.value
 })
 
-densityInput.addEventListener('input', e => {
+densityInput.addEventListener('change', e => {
   snowfall.setDensity(e.target.value)
   densityCount.innerText = e.target.value
 })
