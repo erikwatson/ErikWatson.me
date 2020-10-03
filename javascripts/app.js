@@ -14,7 +14,8 @@ function displayGreeting () {
 
 function snow () {
   snowfall.start({
-    bg: '#232323'
+    bg: '#232323',
+    density: 75
   })
 }
 
