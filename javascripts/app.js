@@ -26,8 +26,6 @@ function run () {
     ? true
     : false
 
-  console.log(shouldSnow)
-
   if (shouldSnow) {
     snow()
   }
