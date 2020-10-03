@@ -1,0 +1,110 @@
+body {
+  font-family: "Ubuntu Mono", monospace, sans-serif;
+  background-color: #232323;
+  color: #e3e3e3;
+  font-size: 14pt;
+  padding: 0px;
+  margin: 0px; }
+
+p {
+  line-height: 1.3em; }
+
+a {
+  color: #7CAFC2;
+  text-decoration: none; }
+
+a:hover {
+  color: #BA8BAF; }
+
+h1 {
+  font-family: "Yanone Kaffeesatz", sans-serif, sans-serif;
+  font-size: 36pt;
+  font-weight: 400;
+  color: #AB4642;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px; }
+
+h2 {
+  font-weight: 400;
+  font-size: 24pt;
+  font-family: "Yanone Kaffeesatz", sans-serif, sans-serif;
+  color: #DC9656;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px; }
+
+h3 {
+  font-weight: 400;
+  font-size: 20pt;
+  font-family: "Yanone Kaffeesatz", sans-serif, sans-serif;
+  color: #F7CA88;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px; }
+
+#wrapper {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#row {
+  width: 100%;
+  clear: both; }
+
+#header {
+  padding: 100px 20px 100px 20px; }
+
+.col-left-50 {
+  float: left;
+  width: 50%; }
+
+.col-right-50 {
+  float: right;
+  width: 50%; }
+
+#header {
+  text-align: center; }
+
+.container {
+  padding: 20px;
+  display: block; }
+  .container ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 20px;
+    columns: 2; }
+    .container ul li {
+      margin-bottom: 5px; }
+    .container ul li:before {
+      content: "\002B\00A0";
+      color: #AB4642; }
+  @media screen and (max-width: 600px) {
+    .container ul {
+      columns: 1; } }
+
+@media screen and (max-width: 1024px) {
+  .col-left-50 {
+    width: 100%; }
+  .col-right-50 {
+    width: 100%; } }
+
+#professional-projects ul {
+  columns: 1; }
+
+#personal-projects ul {
+  columns: 1; }
+
+#snow-wrapper {
+  max-width: 100vw;
+  max-height: 100vh;
+  line-height: 0px; }
+
+#snow-container {
+  max-width: 100vw;
+  height: 100vh; }
+
+#snow-header {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 3em; }

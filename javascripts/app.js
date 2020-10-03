@@ -1,5 +1,3 @@
-import Events from './events'
-
 function displayGreeting () {
   const github = 'https://github.com/championchap/ErikWatson.me'
   const messages = [
@@ -20,6 +18,10 @@ function run () {
   displayGreeting()
 }
 
-Events.onReady(() => {
-  run()
-})
+function onReady (callback) {
+	document.addEventListener('DOMContentLoaded', () => {
+  	callback()
+  })
+}
+
+onReady(run)
