@@ -12,7 +12,26 @@ function displayGreeting () {
   })
 }
 
+function snow () {
+  snowfall.start({
+    bg: '#232323'
+  })
+}
+
 function run () {
+  const searchParams = new URLSearchParams(window.location.search)
+  const date = new Date()
+  const month = date.getMonth()
+  const shouldSnow = (month === 11 || searchParams.has('snow'))
+    ? true
+    : false
+
+  console.log(shouldSnow)
+
+  if (shouldSnow) {
+    snow()
+  }
+
   displayGreeting()
 }
 
