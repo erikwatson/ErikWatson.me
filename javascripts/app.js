@@ -17,8 +17,8 @@ function run () {
 }
 
 function onReady (callback) {
-	document.addEventListener('DOMContentLoaded', () => {
-  	callback()
+  document.addEventListener('DOMContentLoaded', () => {
+    callback()
   })
 }
 
