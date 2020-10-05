@@ -86,6 +86,7 @@
             <li>A React based search engine for a holliday cottage renting website with Google Maps integration. Very similar to AirBnB's search page.</li>
             <li>An Application that configures and allows the purchase of a handrail for a staircase, complete with a to-scale drawing that is updated in real time. </li>
             <li>A web based image editing application that allows users to create and customise canvas prints of their photographs.</li>
+            <li>A catalogue and custom CMS for a Framing Supplies store</li>
           </ul>
         </div>
         <div class="container" id="personal-projects">
@@ -131,5 +132,49 @@
     </div>
   </div>
   <script src="./javascripts/snowfall.min.js"></script>
-  <script src="./javascripts/app.js"></script>
+  <script>
+    function displayGreeting () {
+      const github = 'https://github.com/erikwatson/ErikWatson.me'
+      const messages = [
+        'Hello, nosey.',
+        "There isn't much to see in here, really.",
+        "It's a very simple site based on the lovely Base16 colour scheme.",
+        `Source code for this site available at: ${github}`
+      ]
+
+      messages.forEach(message => {
+        console.log(message)
+      })
+    }
+
+    function snow () {
+      snowfall.start({
+        bg: '#232323',
+        density: 75
+      })
+    }
+
+    function run () {
+      const searchParams = new URLSearchParams(window.location.search)
+      const date = new Date()
+      const month = date.getMonth()
+      const shouldSnow = (month === 11 || searchParams.has('snow'))
+        ? true
+        : false
+
+      if (shouldSnow) {
+        snow()
+      }
+
+      displayGreeting()
+    }
+
+    function onReady (callback) {
+      document.addEventListener('DOMContentLoaded', () => {
+        callback()
+      })
+    }
+
+    onReady(run)
+  </script>
 </body>
