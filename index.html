@@ -11,7 +11,7 @@
   </head>
 </html>
 <body>
-  <div id="snow-container"></div>
+  <div id="snowfall"></div>
   <div id="wrapper">
 
     <div class="container" id="header">
@@ -155,7 +155,27 @@
     }
 
     function snow () {
-      snowfall.start()
+      snowfall.start({
+        layers: [
+          {
+            colour: "#8d90b7",
+            opacity: { from: 1, to: 1 },
+            wind: {
+              gusts: {
+                changeChance: 0.50
+              }
+            }
+          },
+          {
+            opacity: { from: 1, to: 1 },
+            wind: {
+              gusts: {
+                changeChance: 0.50
+              }
+            }
+          }
+        ]
+      })
     }
 
     function run () {
