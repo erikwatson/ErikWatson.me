@@ -155,7 +155,19 @@
     }
 
     function snow () {
-      snowfall.start({
+      
+    }
+
+    function run () {
+      const searchParams = new URLSearchParams(window.location.search)
+      const shouldSnow = searchParams.has('snow')
+
+      const schedule = { 
+        from: { month: 12, day: 1 }, 
+        to: { month: 12, day: 31 } 
+      }
+
+      const config = {
         layers: [
           {
             colour: "#8d90b7",
@@ -175,19 +187,12 @@
             }
           }
         ]
-      })
-    }
-
-    function run () {
-      const searchParams = new URLSearchParams(window.location.search)
-      const date = new Date()
-      const month = date.getMonth()
-      const shouldSnow = (month === 11 || searchParams.has('snow'))
-        ? true
-        : false
+      }
 
       if (shouldSnow) {
-        snow()
+        snowfall.start(config)
+      } else {
+        snowfall.schedule(schedule, config)
       }
 
       displayGreeting()
