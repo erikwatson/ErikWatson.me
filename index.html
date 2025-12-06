@@ -200,35 +200,117 @@
 
     function space() {
       const schedule = { 
-        from: { month: 1, day: 2 }, 
+        from: { month: 1, day: 1 }, 
         to: { month: 11, day: 30 } 
       }
 
-      const config = {
+      const strength = 0.25
+      const spaceConfig = {
         layers: [
           {
-            colour: "#8d90b7",
+            colour: "#f4d7d7",
             opacity: { from: 1, to: 1 },
+            density: 100,
+            mass: {
+              min: 0.5,
+              max: 1
+            },
+            size: {
+              min: 0.5, max: 1
+            },
+            sway: {
+              frequency: 0,
+              amplitude: 0
+            },
+            gravity: {
+              strength: 0
+            },
             wind: {
+              strength,
               gusts: {
-                changeChance: 0.25
+                active: false,
+                changeChance: 0
               }
             }
           },
           {
             opacity: { from: 1, to: 1 },
+            mass: {
+              min: 1,
+              max: 2
+            },
+            size: {
+              min: 1, max: 2
+            },
+            sway: {
+              frequency: 0,
+              amplitude: 0
+            },
+            gravity: {
+              strength: 0
+            },
             wind: {
+              strength,  
               gusts: {
-                changeChance: 0.25
+                active: false,
+                changeChance: 0
+              }
+            }
+          },
+          {
+            opacity: { from: 1, to: 1 },
+            colour: "#d7e0f4",
+            density: 100,
+            mass: {
+              min: 1,
+              max: 2
+            },
+            size: {
+              min: 1, max: 2
+            },
+            sway: {
+              frequency: 0,
+              amplitude: 0
+            },
+            gravity: {
+              strength: 0
+            },
+            wind: {
+              strength,
+              gusts: {
+                active: false,
+                changeChance: 0
+              }
+            }
+          },
+          {
+            opacity: { from: 1, to: 1 },
+            density: 50,
+            mass: {
+              min: 1,
+              max: 3
+            },
+            size: {
+              min: 1, max: 3
+            },
+            sway: {
+              frequency: 0,
+              amplitude: 0
+            },
+            gravity: {
+              strength: 0
+            },
+            wind: {
+              strength,
+              gusts: {
+                active: false,
+                changeChance: 0
               }
             }
           }
         ]
       }
-
-      const strength = 0.25
-
-      snowfall.schedule(schedule, {
+      const roswellConfig = {
         layers: [
           {
             colour: "#f4d7d7",
@@ -360,7 +442,11 @@
             }
           }
         ]
-      })
+      }
+
+      const isJuly8th = today.getDate() === 8 && today.getMonth() === 6;
+
+      snowfall.schedule(schedule, (isJuly8th) ? roswellConfig : spaceConfig)
     }
 
     function run () {
