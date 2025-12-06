@@ -443,7 +443,8 @@
           }
         ]
       }
-
+      
+      const today = new Date();
       const isJuly8th = today.getDate() === 8 && today.getMonth() === 6;
 
       snowfall.schedule(schedule, (isJuly8th) ? roswellConfig : spaceConfig)
